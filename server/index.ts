@@ -2,6 +2,7 @@ const express = require('express')
 const http = require('http')
 const app = express()
 const server = http.createServer(app)
+const PORT = process.env.PORT || 3001; 
 
 import { Server } from 'socket.io'
 const io = new Server(server, {
@@ -35,6 +36,6 @@ io.on('connection', (socket) => {
   socket.on('clear', () => io.emit('clear'))
 })
 
-server.listen('https://canvas-websockets-master-d5dguhtmf-shkhrtrxshs-projects.vercel.app/', () => {
-  console.log('✔️ Server listening on port 3001')
+server.listen(PORT, () => {
+  console.log(`✔️ Server listening on port ${PORT}`)
 })
