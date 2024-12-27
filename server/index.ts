@@ -35,6 +35,6 @@ io.on('connection', (socket) => {
   socket.on('clear', () => io.emit('clear'))
 })
 
-server.listen(3001, () => {
+server.listen('https://canvas-websockets-master-d5dguhtmf-shkhrtrxshs-projects.vercel.app/', () => {
   console.log('✔️ Server listening on port 3001')
 })
