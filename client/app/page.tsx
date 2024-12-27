@@ -6,7 +6,7 @@ import { ChromePicker } from 'react-color'
 
 import { io } from 'socket.io-client'
 import { drawLine } from '../utils/drawLine'
-const port = process.env.NEXT_PUBLIC_PORT
+const port: any = process.env.NEXT_PUBLIC_PORT
 const socket = io(port)
 
 interface pageProps {}
