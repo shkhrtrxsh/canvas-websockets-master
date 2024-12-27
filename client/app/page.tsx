@@ -6,7 +6,8 @@ import { ChromePicker } from 'react-color'
 
 import { io } from 'socket.io-client'
 import { drawLine } from '../utils/drawLine'
-const socket = io('https://canvas-websockets-master-d5dguhtmf-shkhrtrxshs-projects.vercel.app/')
+const port = process.env.NEXT_PUBLIC_PORT
+const socket = io(port)
 
 interface pageProps {}
 
